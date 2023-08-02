@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from utils.meuapp.factory import make_recipe
 
+
 def home(request):
     return render(request, 'meuapp/pages/home.html', context={
         'recipes': [make_recipe() for _ in range(10)],
